@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/trqvel/rest-to-do/source/auth"
+	"github.com/trqvel/rest-to-do/src/auth"
 )
 
 func JWTMiddleware(next http.Handler) http.Handler {

@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/trqvel/rest-to-do/source/tasks"
+	"github.com/trqvel/rest-to-do/src/tasks"
 )
 
 func SetupRoutes() *mux.Router {
