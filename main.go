@@ -9,14 +9,10 @@ import (
 )
 
 func main() {
-	// Инициализация базы данных
-	db.Init()
-	// Миграция схемы базы данных (если нужно)
-	// db.Migrate()
 
-	// Настройка маршрутов
+	db.Init()
+
 	router := api.SetupRoutes()
 
-	// Запуск сервера
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
