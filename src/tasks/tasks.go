@@ -2,7 +2,6 @@ package tasks
 
 import "github.com/trqvel/rest-to-do/db"
 
-// Task представляет задачу
 type Task struct {
 	ID          int    `json:"id" gorm:"primaryKey"`
 	UserID      int    `json:"user_id"`
