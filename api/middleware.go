@@ -3,7 +3,6 @@ package api
 import (
 	"net/http"
 	"strings"
-
 	"github.com/trqvel/rest-to-do/src/auth"
 )
 
