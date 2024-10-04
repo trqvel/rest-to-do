@@ -6,7 +6,6 @@ import (
 	"strconv"
 )
 
-// GetTasksHandler - обработчик для получения задач
 func GetTasksHandler(w http.ResponseWriter, r *http.Request) {
 	userIDStr := r.URL.Query().Get("user_id")
 	userID, err := strconv.Atoi(userIDStr)
@@ -25,7 +24,6 @@ func GetTasksHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(tasks)
 }
 
-// CreateTaskHandler - обработчик для создания задачи
 func CreateTaskHandler(w http.ResponseWriter, r *http.Request) {
 	var task Task
 	err := json.NewDecoder(r.Body).Decode(&task)
