@@ -2,14 +2,12 @@ package auth
 
 import (
 	"time"
-
 	"github.com/dgrijalva/jwt-go"
 )
 
 var jwtKey = []byte("your_secret_key")
 
 func GenerateJWT(userID int) (string, error) {
-	// Генерация JWT токена
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"user_id": userID,
 		"exp":     time.Now().Add(24 * time.Hour).Unix(),
